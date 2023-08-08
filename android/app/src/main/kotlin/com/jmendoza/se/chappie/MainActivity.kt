@@ -1,4 +1,4 @@
-package com.jmendoza.se.mental_health
+package com.jmendoza.se.chappie
 
 import io.flutter.embedding.android.FlutterActivity
 
