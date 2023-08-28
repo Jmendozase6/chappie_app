@@ -9,7 +9,7 @@ extension Routes on AppRoutes {
       case AppRoutes.home:
         return '/';
       case AppRoutes.chat:
-        return '/chat';
+        return 'chat';
       default:
         return '/';
     }

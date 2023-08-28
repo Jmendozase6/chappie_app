@@ -5,7 +5,7 @@ import 'package:mental_health/presentation/widgets/shared/message_field_box.dart
 import 'package:mental_health/presentation/widgets/chat/my_message_bubble.dart';
 import 'package:provider/provider.dart';
 import 'package:mental_health/domain/entities/entities.dart';
-import 'package:mental_health/presentation/providers/message_repository_provider.dart';
+import 'package:mental_health/presentation/providers/home/message_repository_provider.dart';
 
 class ChatView extends StatelessWidget {
   const ChatView({super.key});

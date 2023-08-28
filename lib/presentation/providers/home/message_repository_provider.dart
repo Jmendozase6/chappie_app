@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:mental_health/domain/entities/entities.dart';
 import 'package:mental_health/domain/entities/role.dart';
-import 'package:mental_health/domain/repositories/bard_repository.dart';
+import 'package:mental_health/domain/repositories/message_repository.dart';
 import 'package:mental_health/infrastructure/datasources/message_bard_datasource.dart';
 import 'package:mental_health/infrastructure/repositories/message_bard_repository_impl.dart';
 import 'package:mental_health/utils/entities/role_extension.dart';
 
-class MessageRepositoryProvider extends ChangeNotifier {
+class MessageRepositoryProvider with ChangeNotifier {
   bool _isLoading = false;
   final TextEditingController messageController = TextEditingController();
   final List<Message> _messages = [];
-  final BardRepository datasource =
-      MessageBardRepositoryImpl(MessageBardDatasource());
+  // final MessageRepository datasource =
+  //     MessageRepositoryImpl(MessageBardDatasource());
+  late MessageRepository datasource;
   final ScrollController _scrollController = ScrollController();
   Role _role = Role(
     rol: Roles.conversation.rol,
     image: Roles.conversation.image,
     prompt: Roles.conversation.prompt,
   );
+
+  MessageRepositoryProvider(String token) {
+    datasource = MessageRepositoryImpl(MessageBardDatasource(token));
+  }
 
   bool get isLoading => _isLoading;
   List<Message> get messages => _messages;

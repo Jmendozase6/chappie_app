@@ -26,7 +26,7 @@ class HomeView extends StatelessWidget {
           ),
           Image.asset(
             AppImages.chatBot,
-            width: 0.6.sw,
+            height: 0.3.sh,
           ),
           SizedBox(
             width: 0.7.sw,

@@ -1,11 +1,11 @@
 import 'package:mental_health/domain/entities/message.dart';
-import 'package:mental_health/domain/repositories/bard_repository.dart';
+import 'package:mental_health/domain/repositories/message_repository.dart';
 import 'package:mental_health/infrastructure/datasources/message_bard_datasource.dart';
 
-class MessageBardRepositoryImpl extends BardRepository {
+class MessageRepositoryImpl extends MessageRepository {
   final MessageBardDatasource datasource;
 
-  MessageBardRepositoryImpl(this.datasource);
+  MessageRepositoryImpl(this.datasource);
 
   @override
   Future<Message> initChat(String prompt) async {

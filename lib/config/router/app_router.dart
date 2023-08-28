@@ -15,15 +15,17 @@ class AppRouter {
           state: state,
           child: const HomeScreen(),
         ),
-      ),
-      GoRoute(
-        path: AppRoutes.chat.routePath,
-        name: AppRoutes.chat.routeName,
-        pageBuilder: (context, state) => buildPageWithDefaultTransition(
-          context: context,
-          state: state,
-          child: const ChatScreen(),
-        ),
+        routes: [
+          GoRoute(
+            path: AppRoutes.chat.routePath,
+            name: AppRoutes.chat.routeName,
+            pageBuilder: (context, state) => buildPageWithDefaultTransition(
+              context: context,
+              state: state,
+              child: const ChatScreen(),
+            ),
+          ),
+        ],
       ),
     ],
   );

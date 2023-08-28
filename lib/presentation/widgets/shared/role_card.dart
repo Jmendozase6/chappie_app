@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mental_health/config/theme/app_colors.dart';
 import 'package:mental_health/domain/entities/role.dart';
-import 'package:mental_health/presentation/providers/message_repository_provider.dart';
+import 'package:mental_health/presentation/providers/home/message_repository_provider.dart';
 import 'package:mental_health/utils/app_router/router_utils.dart';
 import 'package:provider/provider.dart';
 
